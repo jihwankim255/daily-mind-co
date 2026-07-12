@@ -1,0 +1,198 @@
+:root {
+  --bg: #fafafa;
+  --bg-alt: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-soft: #eef2ff;
+  --border: #e5e7eb;
+  --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --bg-alt: #171a21;
+    --text: #f2f2f3;
+    --text-muted: #9ca3af;
+    --accent: #818cf8;
+    --accent-soft: #1e2030;
+    --border: #2a2d36;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Apple SD Gothic Neo", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 96px 24px 64px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 56px 0;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.about p {
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.app-card {
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.app-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.app-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.app-card.placeholder {
+  border-style: dashed;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100px;
+  font-size: 14px;
+}
+
+.contact-box {
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.contact-box a {
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.policy h1 {
+  font-size: 28px;
+  margin-top: 48px;
+}
+
+.policy h2 {
+  font-size: 18px;
+  margin-top: 36px;
+}
+
+.policy p, .policy li {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.policy .updated {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
